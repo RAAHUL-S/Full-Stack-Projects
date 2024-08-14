@@ -1,0 +1,65 @@
+<!DOCTYPE html>
++<html>
++    <head>
++        <title>BIT-HOSTEL</title>
++        <link rel="icon" href="img/bitlo.jpeg">
++        <link rel="stylesheet" href="sd.css">
++        <meta name="viewport" content="width=device-width, initial-scale=1.0">
++        <script src="https://kit.fontawesome.com/f5c7867cea.js" crossorigin="anonymous"></script>
++    </head>
++    <body>
++        <section id="banner">
++            <img src="img/logo.png" class="logo">
++            <div class="banner-text">
++                <h1>Bit Hostel</h1>
++                <p>A hostel is not just a place to stay, it's a community of like-minded wanderers.</p>
++                <div class="banner-btn">
++                    <a href="#Overview" id="exploreBtn" onclick="event.target.scrollIntoView({behavior: 'smooth'}); return false;">Explore</a>
++                    <a href="#" onclick="event.preventDefault(); return false;">Login</a>
++                </div>
++            </div>
++        </section>
++        <div id="sideNav">
++            <nav>
++                <ul>
++                    <li><a href="#">HOME</a></li>
++                    <li><a href="#">ROOM BOOKING</a></li>
++                    <li><a href="#">SUPPORT DESK</a></li>
++                    <li><a href="#">BIO-METRICS</a></li>
++                    <li><a href="#contact" id="contactNav" onclick="event.preventDefault(); scrollToElement('contact'); return false;">CONTACT</a></li>
++                </ul>
++            </nav>
++        </div>
++        <div id="menubtn">
++            <img src="img/menu.png" id="menu">
++        </div>
++        <script>
++            function scrollToElement(id) {
++                const element = document.getElementById(id);
++                element.scrollIntoView({behavior: "smooth", block: "end"});
++            }
++        </script>
++        <section id="Overview">
++            <div class="title-text">
++                <p>ABOUT</p>
++                <h1>Overview</h1>
++            </div>
++            <div class="container-box">
++                <div class="Overview-box">
++                    <p>Well-furnished hostels for gents and ladies with four, double and single occupancy rooms are available with separate guest rooms. The living rooms are built with aesthetic layout, containing wardrobe and storage space. The dining halls with a seating capacity of 4100 students are available. Well planned and equipped servicing counters, highly modernised kitchen, a cold storage and dish washing machine form a part of residential functions. Student Centre of the Institution is certified for the 5S Work Place Management System.</p>
++                </div>
++            </div>
++            <!-- rest of the code -->
++        </section>
++        <section id="contact">
++            <!-- contact section code -->
++        </section>
++        <script>
++            const contactNav = document.getElementById("contactNav");
++            contactNav.addEventListener("click", function(){
++                event.preventDefault();
++                scrollToElement("contact");
++            });
++        </script>
++    </body>
++</html>
