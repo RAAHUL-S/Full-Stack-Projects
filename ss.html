@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BIT HOSTEL</title>
+        <link rel="icon" href="img/bitlo.jpeg">
+        <link rel="stylesheet" href="sd.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/f5c7867cea.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            #banner {
+                background-image: linear-gradient(rgba(0,0,0,0.5),#cd69ee),url('img/slider-03-1.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+            }
+            .logo{
+                position:absolute;
+                top:30%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                width:250px; /* increased size */
+                height: 250px; /* increased size */
+            }
+            .banner-text{
+                text-align:center;
+                colour: #fff;
+                padding-top:180px;
+            }
+            .banner-text{
+                position:absolute;
+                top:45%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                width:100%;
+                text-align:center;
+                color:#fff;
+            }
+            .banner-text h1{
+                font-size:50px;
+                font-family:Georgia;
+            }
+            .banner-text p{
+                font-size:20px;
+                font-style:italic;
+            }
+            .banner-btn{
+                margin:70px auto 0;
+                text-align:center;
+            }
+            .banner-btn a{
+                width:150px;
+                text-decoration:none;
+                display:inline-block;
+                margin:0 10px;
+                padding:12px 0;
+                color:#fff;
+                border: .5px solid #fff;
+                position:relative;
+                z-index= 1;
+                transition: color 0.5s;
+            }
+            .banner-btn a span{
+                   width:0;
+                   height: 100%;
+                   position:absolute;
+                   top:0;
+                   left:0;
+                   background: #fff;
+                   z-index: -1; 
+            }
+            .banner-btn a:hover span{
+                width:100%;
+                transition:0.5s;
+            }
+            .banner-btn a:hover{
+                color:#000;
+            }
+            #sideNav{
+                width:250px;
+                height:100vh;
+                position:fixed;
+                right:-250px;
+                top:0;
+                background:#cd69ee;
+                z-index: 2;
+                transition:right 0.5s; /* added the "right" property to the transition */
+            }
+            nav ul li{
+                list-style: none;
+                margin:50px 20px;
+            }
+            nav ul li a{
+                text-decoration:none;
+            }
+            #menubtn{
+                width:50px;
+                height:50px;
+                background:#cd69ee;
+                text-align:center;
+                position:fixed;
+                right:30px;
+                top:20PX;
+                border-radius:3px;
+                z-index:3;
+                cursor:pointer;
+            }
+            #menubtn img{
+                width:20px;
+                margin-top:15px;
+            }
+            #Overview{
+                width:100%;
+                padding:70px 0;
+            }
+            .title-text{
+                text-align:center;
+                padding-bottom: 70px;
+            }
+            .title-text p{
+                margin: auto;
+                font-size: 50px;
+                color:#711E93;
+                font-weight:bold;
+                font-family:Brush Script M7;
+            }
+            .title-text h1{
+                font-size : 30px;
+                font-family:Comic Sans MS;
+            }
+            .container-box{
+                width : 50%;
+                margin:auto;
+                display:flex;
+                flex-wrap:wrap;
+                align-items:center;
+                text-align:center;
+                background: linear-gradient(to bottom, rgba(205, 105, 238, 0.5), rgba(205, 105, 238, 0.5));
+                padding: 50px 40px 40px; /* increased padding for top */
+                position: relative; /* added for positioning */
+                top: -60px; /* moved container up */
+            }
+            .Overview-box{
+                visibility: visible;
+                text-align:justify; 
+                font-size: 1.2em; /* increased text size */
+            }
+            .title-text1 h1{
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 0;
+                font-family:Comic Sans MS;
+            }
+            .title-text1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 60px;
+                font-size: 24px;
+                font-weight: bold;
+                position: relative;
+                top: -70px;
+                width: 100%;
+            }
+            .title-text2 h1{
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 0;
+                font-family:Comic Sans MS;
+            }
+            .title-text2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 60px;
+                font-size: 24px;
+                font-weight: bold;
+                position: relative;
+                top: -70px;
+                width: 100%;
+            }
+            .title-text3 h1{
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 0;
+                font-family:Comic Sans MS;
+            }
+            .title-text3{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 60px;
+                font-size: 24px;
+                font-weight: bold;
+                position: relative;
+                top: -70px;
+                width: 100%;
+            }
+            .title-text4 h1{
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 0;
+                font-family:Comic Sans MS;
+            }
+            .title-text4{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 60px;
+                font-size: 24px;
+                font-weight: bold;
+                position: relative;
+                top: -70px;
+                width: 100%;
+            }
+            .title-text5 h1{
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 0;
+                font-family:Comic Sans MS;
+            }
+            .title-text5{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 60px;
+                font-size: 24px;
+                font-weight: bold;
+                position: relative;
+                top: -70px;
+                width: 100%;
+            }
+            .title-text6 h1{
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 0;
+                font-family:Comic Sans MS;
+            }
+            .title-text6{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 60px;
+                font-size: 24px;
+                font-weight: bold;
+                position: relative;
+                top: -70px;
+                width: 100%;
+            }
+            #footer{
+                padding:100px 0 20px;
+                background: #efefef;
+                text-align:left;
+            
+            }
+            .footer-row{
+                width:80%;
+                margin: 0 auto;
+                display:flex;
+                justify-content: space-between;
+                flex-wrap:wrap;
+            }
+            .footer-left,.footer-right{
+                flex-basis:45%;
+                padding:10px;
+                margin-bottom:20px;
+
+            }
+            .footer-right{
+                text-align:right;
+                margin-left: 30px; /* added margin to move Contact slightly left */
+            }
+            .footer-row h1{
+                margin:10px 0px ;
+            }
+            .footer-row p{
+                line-height:15px;
+            }
+
+
+        </style>
+        <section id="banner">
+            <img src="img/logo.png" class="logo">
+            <div class="banner-text">
+                <h1>Bit Hostel</h1>
+                <p>A hostel is not just a place to stay, it's a community of like-minded wanderers.</p>
+            <div class="banner-btn">
+                <a href="#Overview" id="exploreBtn" onclick="event.target.scrollIntoView({behavior: 'smooth'}); return false;"><span></span>Explore</a>
+                <a href="file:///C:/Users/91934/OneDrive/Desktop/PRO-HO/Login/Login-sign/index.html" onclick="event.preventDefault(); window.location.href = this.href; return false;"><span></span>Login</a>
+            </div>
+        </div>
+            </section>
+            <div id="sideNav">
+                <nav>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ROOM BOOKING</a></li>
+                        <li><a href="C:\Users\91934\OneDrive\Desktop\PRO-HO\Login\Login-sign\SD.html" onclick="event.preventDefault(); window.location.href = this.href; return false;">SUPPORT DESK</a></li>
+                        <li><a href="#">BIO-METRICS</a></li>
+                        <li><a href="#footer" id="CONTACT" onclick="event.preventDefault(); document.getElementById('CONTACT').scrollIntoView({behavior: 'smooth', block: 'end'}); return false;">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="menubtn">
+                <img src="img/menu.png" id-"menu">
+            </div>
+            <section id="Overview">
+                <div class="title-text">
+                    <p>ABOUT</p>
+                    <h1>Overview</h1>
+                </div>
+                <div class="container-box">
+                    <div class="Overview-box">
+                    <p>Well-furnished hostels for gents and ladies with four, double and single occupancy rooms are available with separate guest rooms. The living rooms are built with aesthetic layout, containing wardrobe and storage space. The dining halls with a seating capacity of 4100 students are available. Well planned and equipped servicing counters, highly modernised kitchen, a cold storage and dish washing machine form a part of residential functions. Student Centre of the Institution is certified for the 5S Work Place Management System.</p>
+                </div>
+                </div>
+                <div class="title-text1">
+                    <h1>Gents Hostel</h1>
+                </div>
+                <div class="container-box">
+                    <div class="Overview-box">
+                    <img src="img/gentsroom.jpg" alt="Gents Hostel" class="center" style="max-width: 100%; height: auto;"/>
+                    <p>Men's hostel has six blocks named Sapphire, Emerald, Ruby, Diamond, Coral and Pearl. Sapphire has 282 four bedded rooms. Emerald has 284 four bedded rooms. Ruby has 68 four-bed rooms, 145 double-bedded rooms and 24 single Bedded rooms, Diamond has 146 double bedded rooms and 34 single Bedded rooms. Coral has 51 double bedded rooms and a single Bed room. Pearl has 138 four bedded rooms and 33 double-bedded rooms. Overall, the six blocks can accommodate 3897 members in 1206 rooms.</p>
+                </div>
+                </div>
+                <div class="title-text2">
+                    <h1>Ladies Hostel</h1>
+                </div>
+                <div class="container-box">
+                    <div class="Overview-box">
+                        <div style="max-width: 100%; display: flex; justify-content: center;">
+                            <img src="img\ladieshostel.jpg" alt="Ladies Hostel" 
+                            style="max-width: 100%; height: auto; max-height: 100vh; width: auto;"/>
+                        </div>
+                    <p>Women's hostel has seven blocks named Ganga, Yamuna, Narmadha, Cauvery, North Bhavani, South Bhavani and Old Bhavani.
+
+                        Ganga has 124 four bedded rooms and 8 double bedded rooms. Yamuna has 93 four bedded rooms and 6 double bedded rooms. Narmatha is the only block to have the 8 five bedded rooms, 96 four bedded rooms, 16 double bedded rooms and 8 single bedded rooms. Cauvery block has 111 double bedded rooms and 15 single bedded rooms. The North Bhavani and South Bhavani both have the capacity of 64 four bedded rooms, 4 double bedded rooms and four single bedded rooms respectively. Old Bhavani has the speciality of 8 eight bedded rooms, 2 single bedded rooms.
+                        
+                        Overall, the seven blocks can accommodate 2199 members in 639 rooms</p>
+                </div>
+                </div>
+                <div class="title-text3">
+                    <h1>Medical Centre</h1>
+                </div>
+                <div class="container-box">
+                    <div class="Overview-box">
+                        <img src="img\hospital.jpg" alt="Hospital" class="center" style="max-width: 100%; height: auto;"/>
+                    <p>A well-equipped Medical Centre is available in the campus. Dr J Anitha MBBS and Dr M S Soundararajan MBBS are the Resident Medical Officers. Additionaly there are Staff Nurses and Nursing Assistants available to take care of the students round the clock. In case of emergency, ambulance service is readily available for 24 hours to access the medical facilities in the hospitals located at Sathyamangalam or Coimbatore or Erode.</p>
+                </div>
+                </div>
+                <div class="title-text4">
+                    <h1>Gym</h1>
+                </div>
+                <div class="container-box">
+                    <div class="Overview-box">
+                        <img src="img\gym.jpg" alt="gym" class="center" style="max-width: 100%; height: auto;"/>
+                    <p>Fully equipped and scientifically deSigned gym facilities are available in the boys and girls hostel separately. The boys gym consist of Three 4 station, three 2 station, 16 single station gym equipments, Weight lifting and Power lifting sets. And also we have enough barbell weights, barbell & dumbbell rods, fixed dumbbells, cattle bells and Gym Balls. For women, two 4 station equipment, three 2 station equipment, 6 single station equipment. Regularly, there are more than 100 students avail the gym facilities.</p>
+                </div>
+                </div>
+                <div class="title-text5">
+                    <h1>Parlour</h1>
+                </div>
+                <div class="container-box">
+                    <div class="Overview-box">
+                        <img src="img\parlour.jpg" alt="Parlour" class="center" style="max-width: 100%; height: auto;"/>
+                        <p><strong>“A good hair day can make any normal day, a special day.”</strong></p>     
+                        <p>Parlour provides very good Beauty Parlour STUDIO 7 Facilities for girls separately with advanced hair styling, Relaxing massage, Body Massage, Waxing, Detan, Threading, Clean up, Express Glow facials, facials, Cream Bleach and Pedicures.</p>
+                            
+                </div>
+                </div>
+                <div class="title-text6">
+                    <h1>Visitors Hall</h1>
+                </div>
+                <div class="container-box">
+                    <div class="Overview-box">
+                        <img src="img\visitorshall.jpg" alt="visitorshall" class="center" style="max-width: 100%; height: auto;"/>
+                        <p><strong>“Meeting your special people after a long time – The best feeling ever”</strong></p>     
+                    <p>We do consider the need for privacy when hostelites meet their family. To spend their valuable time we have a private place for them.</p>           
+                </div>
+                </div>
+            </section>
+            <section id="footer">
+                <div class="title-text">
+                    <p>CONTACT</p>
+                </div>
+                <div class="footer-row">
+                    <div class="footer-left">
+                        <h1>Deputy Hostel Manager</h1>
+                        <p><i class="fa fa-phone"></i> 1234567890</p>
+                        <p><i class="fa fa-envelope"></i> deputymanagerhostel@bitsathy.ac.in</p>
+                    </div>
+                    <div class="footer-right">
+                        <p>Alathukombai - Post,
+                            Sathyamangalam - 638 401,
+                            Erode District, Tamil Nadu, India</p>
+                        <p><i class="fa fa-phone"></i> +91 4295 226000</p>
+                        <p><i class="fa fa-phone"></i> +91 99429 21289</p>
+                    </div>
+                </div>
+            <script>
+                var menubtn = document.getElementById("menubtn");
+                var sideNav = document.getElementById("sideNav");
+                var menu = document.getElementById("menu");
+                sideNav.style.right = "-250px";
+
+                menubtn.addEventListener("click", function(){
+                    if(sideNav.style.right === "-250px"){
+                        sideNav.style.right = "0";
+                        
+                    }
+                    else{
+                        sideNav.style.right = "-250px";
+    
+                        
+                    }
+                });
+                document.getElementById("exploreBtn").addEventListener("click", function(){
+                                    document.getElementById("Overview").scrollIntoView({behavior: "smooth"});
+                                });
+                
+                document.getElementById("CONTACT").addEventListener("click", function(){
+                    document.getElementById("footer").scrollIntoView({
+                        behavior: "smooth",
+                        block: "end"
+                    });
+                });
+            </script>
+            
+    </body>
+</html>
+
+
+
+
+
+
+
+
